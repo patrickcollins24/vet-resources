@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route, Link  } from 'react-router-dom'
 import { useState } from 'react';
 import Header from './component/Header';
 import Home from './component/Home';
+import About from './component/About';
 import VetReg from './component/VetReg';
 
 
@@ -15,28 +16,15 @@ export default function App() {
 
     <Router>
       <div>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/">VetReg</Link>
-            </li>
-            <li>
-              <Link to="/">users</Link>
-            </li>
-          </ul>
-        </nav>
         <Switch>
-          <Route exact path="/VetReg">
-            <VetReg />
-          </Route>
-          <Route path="/User">
-            <User />
-          </Route>
-          <Route path="/">
+          <Route exact path="/">
             <Home />
+          </Route>
+          <Route path="/About">
+            <About />
+          </Route>
+          <Route path="/VetReg">
+            <VetReg />
           </Route>
         </Switch>
       </div>
@@ -44,15 +32,11 @@ export default function App() {
     
   );
 
-  function Home() {
-    return <h2>Home</h2>;
-  }
-  function VetReg() {
-    return <h2>Registration</h2>;
-  }
-  function User() {
-    return <h2>Profile</h2>;
-  }
+  
+
+  
+
+  
   
 }
 

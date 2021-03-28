@@ -1,13 +1,16 @@
-import { useState } from 'react';
 
 
-const VetReg = () => {
+export default function VetReg() {
+    
+
+
 
 
 
 
     return (
-        
+        <div>
+        <h2>Veterans Registration</h2> 
         <form>
             <div>
                 <label>First Name</label>
@@ -49,8 +52,8 @@ const VetReg = () => {
                 <input type='submit' placeholder='Submit info'  />
             </div>
         </form>
+        </div>
         
     )
-}
 
-export default VetReg
+}
