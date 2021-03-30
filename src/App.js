@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Switch, Route, Link  } from 'react-router-dom'
 import { useState } from 'react';
 import Home from './component/Home';
 import About from './component/About';
-import VetReg from './component/VetReg';
+import Appointment from './component/Appointment';
 
 
 
@@ -37,7 +37,7 @@ export default function App() {
             <About />
           </Route>
           <Route path="/VetReg">
-            <VetReg />
+            <Appointment />
           </Route>
         </Switch>
       </div>
