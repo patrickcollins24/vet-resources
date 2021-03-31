@@ -1,5 +1,5 @@
 import './App.css';
-import Appointment from './component/Appointment';
+import Appointment from './components/Appointment';
 import Navbar from "./components/Navbar/Navbar";
 
 
