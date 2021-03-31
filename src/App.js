@@ -1,5 +1,5 @@
 import './App.css';
-import Appointment from './components/Appointment';
+import Appointments from './components/Appointments';
 import Navbar from "./components/Navbar/Navbar";
 
 
@@ -9,7 +9,7 @@ export default function App() {
 
     <div className="App">
       <Navbar />
-      <Appointment />
+      <Appointments />
     </div>
   );
 }
