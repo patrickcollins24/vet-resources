@@ -1,14 +1,16 @@
 import './App.css';
 import Appointment from './component/Appointment';
+import Navbar from "./components/Navbar/Navbar";
 
 
 
 export default function App() {
   return (
-      <div>
-        <Appointment />
-      </div>
 
+    <div className="App">
+      <Navbar />
+      <Appointment />
+    </div>
   );
 }
 
