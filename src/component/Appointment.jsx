@@ -13,12 +13,12 @@ const Appointment = () => {
                 <label htmlFor='title'>
                     Title
                 </label>
-                <input type='text' placeholder='enter appointment'/>
+                <input type='text'  name='title' placeholder='enter appointment'/>
                 </div>
                 <label htmlFor='title'>
                     Date
                 </label>
-                <input type='date' name='date'/>
+                <input type='date' name='date' placeholder='enter date'/>
                 <label htmlFor='title'>
                     Time
                 </label>
