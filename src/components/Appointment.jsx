@@ -10,7 +10,7 @@ const Appointment = ({ appointment, onDelete }) => {
                 <FaTimes 
                 style={{color:
                 'black', cursor: 'pointer'}}
-                onClick={() => onDelete=(appointment.id)}
+                onClick={() => onDelete(appointment.id)}
                 />
             <p>{appointment.date}</p>
         </h3>
