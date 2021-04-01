@@ -40,9 +40,7 @@ export default function App() {
 
 
 ])
-const AddAppointment = (id) => {
-  
-}
+
 
 const deleteAppointment = (id) => {
   setAppointments(appointments.filter((appointment => appointment.id !== id) ))
@@ -54,6 +52,7 @@ const deleteAppointment = (id) => {
 
     <div className="App">
       <Navbar />
+      <AddAppointment />
       {appointments.length > 0 ?<Appointments appointments={appointments} onDelete={deleteAppointment} /> : 'Add New Appointment'} 
     </div>
   );
