@@ -40,6 +40,10 @@ export default function App() {
 
 
 ])
+const AddAppointment = (id) => {
+  
+}
+
 const deleteAppointment = (id) => {
   setAppointments(appointments.filter((appointment => appointment.id !== id) ))
   
