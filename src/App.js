@@ -1,12 +1,15 @@
 import { useState } from 'react';
 import './App.css';
-import Appointments from './components/Appointments';
 import Navbar from "./components/Navbar/Navbar";
-import { FormProvider } from 'react-hook-form';
+import Appointments from './components/Appointments';
+import AddAppointment from './components/AddAppointment';
+
+
 
 
 
 export default function App() {
+  
   const [appointments, setAppointments]= useState([
 
     {
@@ -37,13 +40,21 @@ export default function App() {
 
 
 ])
+const AddAppointment = (id) => {
+  
+}
+
+const deleteAppointment = (id) => {
+  setAppointments(appointments.filter((appointment => appointment.id !== id) ))
+  
+}
 
 
   return (
 
     <div className="App">
       <Navbar />
-      <Appointments appointments={appointments} />
+      {appointments.length > 0 ?<Appointments appointments={appointments} onDelete={deleteAppointment} /> : 'Add New Appointment'} 
     </div>
   );
 }
