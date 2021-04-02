@@ -90,7 +90,15 @@ export default function App() {
 
 ])
 
+//add
+const addAppointment = (appointment) => {
+  const id = Math.floor(Math.random() * 1000) + 1
+  const newAppointment = { id, ...appointment}
+  setAppointments([...appointment, newAppointment])
+}
 
+
+//delete
 const deleteAppointment = (id) => {
   setAppointments(appointments.filter((appointment => appointment.id !== id) ))
   
@@ -101,7 +109,7 @@ const deleteAppointment = (id) => {
 
     <div className="App">
       <Navbar />
-      <AddAppointment />
+      <AddAppointment onAdd={addAppointment} />
       {appointments.length > 0 ?<Appointments appointments={appointments} onDelete={deleteAppointment} /> : 'Add New Appointment'} 
     </div>
   );
