@@ -33,7 +33,10 @@ class Navbar extends Component {
                         )
                     })}
                 </ul>
-                <Button>Register</Button>
+                <Link to='/register'>
+                    <Button>Register</Button>
+                </Link>
+                
             </nav>
         )
     }

@@ -7,30 +7,21 @@ export const MenuItems = [
         cName: 'nav-links'
     },
     {
-        title: 'About us',
-        url: '/about',
+        title: 'Veteran Page',
+        url: '/users',
         cName: 'nav-links'
     },
     {
-        title: 'Veteran Login',
-        url: '#',
-        cName: 'nav-links'
-    },
-    {
-        title: 'Provider Login',
-        url: '/',
-        cName: 'nav-links'
-    },
-    {
-        title: 'Contact Us',
-        url: '#',
+        title: 'Login',
+        url: '/login',
         cName: 'nav-links'
     },
     {
         title: 'Register',
-        url: '#',
+        url: '/register',
         cName: 'nav-links-mobile'
     },
+
     
 ]
 
