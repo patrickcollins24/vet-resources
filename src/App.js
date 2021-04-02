@@ -18,29 +18,13 @@ export default function App() {
 
   <Router>
       <div>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/">Veterans Page</Link>
-            </li>
-            <li>
-              <Link to="/">Providers Page</Link>
-            </li>
-          </ul>
-        </nav>
+        <Navbar/>
         <Switch>
           <Route exact path="/">
-            <Navbar/>
             <VeteranPage/>
           </Route>
-          <Route path="/Provider Page">
+          <Route path="/ProviderPage">
             <ProviderPage />
-          </Route>
-          <Route path="/">
-            <MenuItems/>
           </Route>
         </Switch>
       </div>

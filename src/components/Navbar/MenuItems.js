@@ -8,7 +8,7 @@ export const MenuItems = [
     },
     {
         title: 'About us',
-        url: '#',
+        url: '/about',
         cName: 'nav-links'
     },
     {
@@ -18,7 +18,7 @@ export const MenuItems = [
     },
     {
         title: 'Provider Login',
-        url: '#',
+        url: '/',
         cName: 'nav-links'
     },
     {
