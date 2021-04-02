@@ -1,7 +1,9 @@
+
+
 export const MenuItems = [
     {
         title: 'Home',
-        url: '#',
+        url: '',
         cName: 'nav-links'
     },
     {
@@ -31,3 +33,4 @@ export const MenuItems = [
     },
     
 ]
+

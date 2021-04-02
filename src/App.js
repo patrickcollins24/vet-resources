@@ -1,14 +1,63 @@
+import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom';
 import { useState } from 'react';
 import './App.css';
 import Navbar from "./components/Navbar/Navbar";
+import MenuItems from 'react'
 import Appointments from './components/Appointments';
 import AddAppointment from './components/AddAppointment';
+import VeteranPage from './components/VeteranPage';
+import ProviderPage from './components/VeteranPage';
 
 
 
 
 
 export default function App() {
+
+
+
+  <Router>
+      <div>
+        <nav>
+          <ul>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/">Veterans Page</Link>
+            </li>
+            <li>
+              <Link to="/">Providers Page</Link>
+            </li>
+          </ul>
+        </nav>
+        <Switch>
+          <Route exact path="/">
+            <Navbar/>
+            <VeteranPage/>
+          </Route>
+          <Route path="/Provider Page">
+            <ProviderPage />
+          </Route>
+          <Route path="/">
+            <MenuItems/>
+          </Route>
+        </Switch>
+      </div>
+    </Router>
+    
+  
+    function VeteranPage() {
+      return <h2>Home</h2>;
+    }
+  
+  function VetReg() {
+    return <h2>Registration</h2>;
+  }
+  function User() {
+    return <h2>Profile</h2>;
+  }
+  
   
   const [appointments, setAppointments]= useState([
 
