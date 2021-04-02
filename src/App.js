@@ -13,89 +13,112 @@ import ProviderPage from './components/VeteranPage';
 
 
 export default function App() {
-
-
-
-  <Router>
+  return (
+    <Router>
       <div>
-        <Navbar/>
+        <nav>
+          <ul>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/login">Login</Link>
+            </li>
+            <li>
+              <Link to="/register">Register</Link>
+            </li>
+            <li>
+              <Link to="/user">User</Link>
+            </li>
+          </ul>
+        </nav>
+
         <Switch>
-          <Route exact path="/">
-            <VeteranPage/>
+          <Route path="/login">
+            <Login />
           </Route>
-          <Route path="/ProviderPage">
-            <ProviderPage />
+          <Route path="/register">
+            <Register />
+          </Route>
+          <Route path="/users">
+            <Users />
+          </Route>
+          <Route path="/">
+            <Home />
           </Route>
         </Switch>
       </div>
     </Router>
+  );
+}
     
   
-    function VeteranPage() {
-      return <h2>Home</h2>;
-    }
-  
-  function VetReg() {
+  function Home() {
+    return <h2>Home</h2>;
+  }
+  function Register() {
     return <h2>Registration</h2>;
   }
-  function User() {
+  function Login() {
+    return <h2>Login</h2>;
+  }
+  function Users() {
     return <h2>Profile</h2>;
   }
   
   
-  const [appointments, setAppointments]= useState([
+//   const [appointments, setAppointments]= useState([
 
-    {
-    id: 1,
-    title: 'Va Clinic appointment',
-    date: '05/25/2021',
-    time: '8:00pm',
-    reminder: true,
-    type: 'medical'
-},
+//     {
+//     id: 1,
+//     title: 'Va Clinic appointment',
+//     date: '05/25/2021',
+//     time: '8:00pm',
+//     reminder: true,
+//     type: 'medical'
+// },
 
-    {
-    id: 2,
-    title: 'resume writing workshop',
-    date: '06/24/2021',
-    time: '10:00am',
-    reminder: true,
-    type: 'event'
-},
-    {
-    id: 3,   
-    title: 'take medicine',
-    date: '03/31/2021',
-    time: '8:00am',
-    reminder: true,
-    type: 'general'
-},
-
-
-])
-
-//add
-const addAppointment = (appointment) => {
-  const id = Math.floor(Math.random() * 1000) + 1
-  const newAppointment = { id, ...appointment}
-  setAppointments([...appointment, newAppointment])
-}
+//     {
+//     id: 2,
+//     title: 'resume writing workshop',
+//     date: '06/24/2021',
+//     time: '10:00am',
+//     reminder: true,
+//     type: 'event'
+// },
+//     {
+//     id: 3,   
+//     title: 'take medicine',
+//     date: '03/31/2021',
+//     time: '8:00am',
+//     reminder: true,
+//     type: 'general'
+// },
 
 
-//delete
-const deleteAppointment = (id) => {
-  setAppointments(appointments.filter((appointment => appointment.id !== id) ))
+// ])
+
+// //add
+// const addAppointment = (appointment) => {
+//   const id = Math.floor(Math.random() * 1000) + 1
+//   const newAppointment = { id, ...appointment}
+//   setAppointments([...appointment, newAppointment])
+// }
+
+
+// //delete
+// const deleteAppointment = (id) => {
+//   setAppointments(appointments.filter((appointment => appointment.id !== id) ))
   
-}
+// }
 
 
-  return (
+  // return (
+  //   <div className="App">
+  //     <Navbar />
+  //     <AddAppointment onAdd={addAppointment} />
+  //     {appointments.length > 0 ?<Appointments appointments={appointments} onDelete={deleteAppointment} /> : 'Add New Appointment'} 
+  //   </div>
+  // );
 
-    <div className="App">
-      <Navbar />
-      <AddAppointment onAdd={addAppointment} />
-      {appointments.length > 0 ?<Appointments appointments={appointments} onDelete={deleteAppointment} /> : 'Add New Appointment'} 
-    </div>
-  );
-}
 
