@@ -34,7 +34,9 @@ const AddAppointment = () => {
                     </select>
                     </div>
                     <button className='form-btn' type='submit'>Add Appointment</button>
-                
+                    <div>
+                        
+                    </div>
             </form>
         </div>
     )

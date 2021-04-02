@@ -5,7 +5,7 @@ import React from 'react'
 const VeteranPage = () => {
     return (
         <div>
-            <h3></h3>
+            <h3>Veterans Page</h3>
             <a href="" target="_blank">
                 <button> Veterans Info </button>
             </a> <br/>
