@@ -7,6 +7,8 @@ import Appointments from './components/Appointments';
 import AddAppointment from './components/AddAppointment';
 import VeteranPage from './components/VeteranPage';
 import ProviderPage from './components/VeteranPage';
+import VeteranLogin from './components/VeteranLogin';
+import VeteranRegistration from './components/VeteranRegistration';
 
 
 
@@ -17,7 +19,7 @@ export default function App() {
     <Router>
       <div>
         <nav>
-          <ul>
+          {/* <ul>
             <li>
               <Link to="/">Home</Link>
             </li>
@@ -28,22 +30,26 @@ export default function App() {
               <Link to="/register">Register</Link>
             </li>
             <li>
-              <Link to="/user">User</Link>
+              <Link to="/users">Users</Link>
             </li>
-          </ul>
+          </ul> */}
         </nav>
 
         <Switch>
           <Route path="/login">
-            <Login />
+            <Navbar />
+            <VeteranLogin />
           </Route>
           <Route path="/register">
-            <Register />
+            <Navbar />
+            <VeteranRegistration />
           </Route>
           <Route path="/users">
-            <Users />
+            <Navbar />
+            <VeteranPage />
           </Route>
           <Route path="/">
+            <Navbar />
             <Home />
           </Route>
         </Switch>
