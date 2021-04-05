@@ -48,6 +48,10 @@ export default function App() {
             <Navbar />
             <ProviderPage />
           </Route>
+          <Route path="/user">
+          <Navbar />
+          <VeteranPage />
+          </Route>
           <Route path="/">
             <Navbar />
             <Home />

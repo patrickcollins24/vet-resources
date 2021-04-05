@@ -12,6 +12,11 @@ export const MenuItems = [
         cName: 'nav-links'
     },
     {
+        title: 'Veteran Page',
+        url: '/user',
+        cName: 'nav-links'
+    },
+    {
         title: 'Login',
         url: '/login',
         cName: 'nav-links'
