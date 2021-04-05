@@ -6,9 +6,9 @@ import MenuItems from 'react'
 import Appointments from './components/Appointments';
 import AddAppointment from './components/AddAppointment';
 import VeteranPage from './components/VeteranPage';
-import ProviderPage from './components/VeteranPage';
-import VeteranLogin from './components/VeteranLogin';
-import VeteranRegistration from './components/VeteranRegistration';
+import ProviderPage from './components/ProviderPage';
+import ProviderLogin from './components/ProviderLogin';
+import ProviderRegistration from './components/ProviderRegistration';
 
 
 
@@ -38,15 +38,15 @@ export default function App() {
         <Switch>
           <Route path="/login">
             <Navbar />
-            <VeteranLogin />
+            <ProviderLogin />
           </Route>
           <Route path="/register">
             <Navbar />
-            <VeteranRegistration />
+            <ProviderRegistration />
           </Route>
           <Route path="/users">
             <Navbar />
-            <VeteranPage />
+            <ProviderPage />
           </Route>
           <Route path="/">
             <Navbar />
