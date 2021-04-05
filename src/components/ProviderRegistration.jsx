@@ -70,6 +70,7 @@ class ProviderRegistration extends React.Component {
               }}
             />
           </label>
+          <br/>
 
                 <label>
                     Last Name:
@@ -83,6 +84,7 @@ class ProviderRegistration extends React.Component {
                         }}
                     />
                 </label>
+                <br/>
 
           <div>
                 <label>
@@ -97,8 +99,9 @@ class ProviderRegistration extends React.Component {
                         }}
                     />
                 </label>
+                <br/>
                 <label>
-                    email:
+                    Email:
                     <input
                         type="email"
                         name="email"
@@ -109,6 +112,7 @@ class ProviderRegistration extends React.Component {
                         }}
                     />
                 </label>
+                <br/>
           </div>
           <div>
                 <label>
@@ -123,6 +127,7 @@ class ProviderRegistration extends React.Component {
                         }}
                     />
                 </label>
+                <br/>
                 <label>
                     State:
                     <input
@@ -135,6 +140,7 @@ class ProviderRegistration extends React.Component {
                         }}
                     />
                 </label>
+                <br/>
                 <label>
                     Zip Code:
                     <input
@@ -147,10 +153,11 @@ class ProviderRegistration extends React.Component {
                         }}
                     />
                 </label>
+                <br/>
           </div>
           <div>
                 <label>
-                    username:
+                    Username:
                     <input
                         type="text"
                         name="password"
@@ -161,6 +168,7 @@ class ProviderRegistration extends React.Component {
                         }}
                     />
                 </label>
+                <br/>
           </div>
           <div>
                 <label>
@@ -175,6 +183,7 @@ class ProviderRegistration extends React.Component {
                         }}
                     />
                 </label>
+                <br/>
                 <label>
                     Confirm Password:
                     <input
@@ -187,6 +196,7 @@ class ProviderRegistration extends React.Component {
                         }}
                     />
                 </label>
+                <br/>
           </div>
           <div>
                 <label>
@@ -201,6 +211,7 @@ class ProviderRegistration extends React.Component {
                         }}
                     />
                 </label>
+                <br/>
           </div>         
           <button type="submit">Submit</button>
         </form>

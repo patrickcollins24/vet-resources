@@ -1,11 +1,10 @@
 
 
-import React from 'react'
 
 const ProviderPage = () => {
     return (
         <div>
-            <h3></h3>
+            <h3>Provider Page</h3>
             <a href="" target="_blank">
                 <button> Provider Info </button>
             </a> <br/>

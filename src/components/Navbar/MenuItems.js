@@ -7,7 +7,7 @@ export const MenuItems = [
         cName: 'nav-links'
     },
     {
-        title: 'Veteran Page',
+        title: 'Provider Page',
         url: '/users',
         cName: 'nav-links'
     },
