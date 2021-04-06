@@ -9,6 +9,7 @@ import VeteranPage from './components/VeteranPage';
 import ProviderPage from './components/ProviderPage';
 import ProviderLogin from './components/ProviderLogin';
 import ProviderRegistration from './components/ProviderRegistration';
+import ResourcesPage from './components/ResourcesPage';
 
 
 
@@ -39,6 +40,10 @@ export default function App() {
           <Route path="/login">
             <Navbar />
             <ProviderLogin />
+          </Route>
+          <Route path="/resources">
+            <Navbar />
+            <ResourcesPage />
           </Route>
           <Route path="/register">
             <Navbar />
