@@ -1,6 +1,9 @@
 import {  useState } from 'react';
 
 const AddAppointment = ({ onAdd }) => {
+    const [, setTitle] =useState('')
+    const [title, setTitle] =useState('')
+    const [title, setTitle] =useState('')
     const [title, setTitle] =useState('')
     const [date, setDate] =useState('')
     const [time, setTime] =useState('')

@@ -7,10 +7,7 @@ const VeteranPage = () => {
         <div>
             <h3>Veterans Page</h3>
             <a href="" target="_blank">
-                <button> Provider Info </button>
-            </a> <br/>
-            <a href="" target="_blank">
-                <button> Calendar </button>
+                <button> Veteran Name </button>
             </a> <br/>
             <a href="" target="_blank">
                 <button> Appointments </button>
@@ -18,23 +15,6 @@ const VeteranPage = () => {
             <a href="" target="_blank">
                 <button> Events </button>
             </a> <br/>
-            <a href="" target="_blank">
-                <button> Add Event </button>
-            </a> <br/>
-            <a href="" target="_blank">
-                <button> Add an Appointment </button>
-            </a> <br/>
-            <a href="" target="_blank">
-                <button> Cancel appointment </button>
-            </a> <br/>
-            <a href="" target="_blank">
-                <button> Resource Page </button>
-            </a> <br/>
-            <a href="" target="_blank">
-                <button> Set Personal Reminders </button>
-            </a> <br/>
-
-
         </div>
     )
 }
