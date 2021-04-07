@@ -55,7 +55,7 @@ class ProviderRegistration extends React.Component {
     return (
       <>
         <form onSubmit={this._handleSubmit}>
-            <div><h1>Provider Registration</h1>
+            <div><h1>Registration</h1>
         </div>
         <div><h2>Please Fill out the following information</h2></div>
             <label>
@@ -198,22 +198,20 @@ class ProviderRegistration extends React.Component {
                 </label>
                 <br/>
           </div>
+          <button type="submit">Submit</button>
           <div>
                 <label>
-                    ProviderCode:
+                    Provider? Click here:
                     <input
-                        type="password"
-                        name="ProviderCode"
-                        placeholder="Provider Code"
-                        value={this.state.ProviderCode}
-                        onChange={(event) => {
-                        this._onChange("ProviderCode", event.target.value);
-                        }}
+                        type="checkbox"
+                        name="Provider?"
+                        placeholder="Provider?"
+                        onChange={this.handleChange} 
                     />
                 </label>
                 <br/>
           </div>         
-          <button type="submit">Submit</button>
+          
         </form>
         {!!this.state.serverResponse ? (
           <LoginMessage

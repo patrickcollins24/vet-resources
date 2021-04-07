@@ -5,12 +5,9 @@
 const VeteranPage = () => {
     return (
         <div>
-            <h3>Veterans Page</h3>
+            <h3>Veteran</h3>
             <a href="" target="_blank">
                 <button> Provider Info </button>
-            </a> <br/>
-            <a href="" target="_blank">
-                <button> Calendar </button>
             </a> <br/>
             <a href="" target="_blank">
                 <button> Appointments </button>
@@ -28,9 +25,6 @@ const VeteranPage = () => {
                 <button> Cancel appointment </button>
             </a> <br/>
             <a href="" target="_blank">
-                <button> Resource Page </button>
-            </a> <br/>
-            <a href="" target="_blank">
                 <button> Set Personal Reminders </button>
             </a> <br/>
 
@@ -39,4 +33,4 @@ const VeteranPage = () => {
     )
 }
 
-export default VeteranPage
+export default VeteranPage;

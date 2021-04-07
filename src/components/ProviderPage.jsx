@@ -4,12 +4,9 @@
 const ProviderPage = () => {
     return (
         <div>
-            <h3>Provider Page</h3>
+            <h3>Provider</h3>
             <a href="" target="_blank">
                 <button> Provider Info </button>
-            </a> <br/>
-            <a href="" target="_blank">
-                <button> Calendar </button>
             </a> <br/>
             <a href="" target="_blank">
                 <button> Appointments </button>
@@ -25,9 +22,6 @@ const ProviderPage = () => {
             </a> <br/>
             <a href="" target="_blank">
                 <button> Cancel appointment </button>
-            </a> <br/>
-            <a href="" target="_blank">
-                <button> Resource Page </button>
             </a> <br/>
             <a href="" target="_blank">
                 <button> Set Personal Reminders </button>

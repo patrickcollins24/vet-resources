@@ -37,9 +37,7 @@ class ProviderLogin extends React.Component {
     return (
       <>
         <form onSubmit={this._handleSubmit}>
-            <div><h1>Provider Login</h1>
-        </div>
-        <div><h2>Register Here</h2>
+            <div><h1>Login</h1>
         </div>
         <div><h2>Already Registered? Sign in Below</h2></div>
             <label>
@@ -77,7 +75,6 @@ class ProviderLogin extends React.Component {
             message={this.state.serverResponse.message}
           />
         ) : null}
-        <div><h2>Forgot Password?</h2></div>
       </>
     );
   }
