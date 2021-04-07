@@ -75,7 +75,6 @@ class ProviderLogin extends React.Component {
             message={this.state.serverResponse.message}
           />
         ) : null}
-        <div><h2>Forgot Password?</h2></div>
       </>
     );
   }
