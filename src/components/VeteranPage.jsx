@@ -5,7 +5,7 @@
 const VeteranPage = () => {
     return (
         <div>
-            <h3>Veterans Page</h3>
+            <h3>Veteran</h3>
             <a href="" target="_blank">
                 <button> Veteran Name </button>
             </a> <br/>
@@ -19,4 +19,4 @@ const VeteranPage = () => {
     )
 }
 
-export default VeteranPage
+export default VeteranPage;

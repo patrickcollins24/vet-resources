@@ -45,7 +45,7 @@ class ProviderRegistration extends React.Component {
     return (
       <>
         <form onSubmit={this._handleSubmit}>
-            <div><h1>Provider Registration</h1>
+            <div><h1>Registration</h1>
         </div>
         <div><h2>Please Fill out the following information</h2></div>
             <label>
@@ -133,8 +133,21 @@ class ProviderRegistration extends React.Component {
                     />
                 </label>
                 <br/>
-          </div>         
+          </div>
           <button type="submit">Submit</button>
+          <div>
+                <label>
+                    Provider? Click here:
+                    <input
+                        type="checkbox"
+                        name="Provider?"
+                        placeholder="Provider?"
+                        onChange={this.handleChange} 
+                    />
+                </label>
+                <br/>
+          </div>         
+          
         </form>
         {!!this.state.serverResponse ? (
           <LoginMessage

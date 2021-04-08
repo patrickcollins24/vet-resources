@@ -4,7 +4,7 @@
 const ProviderPage = () => {
     return (
         <div>
-            <h3>Provider Page</h3>
+            <h3>Provider</h3>
             <a href="" target="_blank">
                 <button> Provider Name </button>
             </a> <br/>
