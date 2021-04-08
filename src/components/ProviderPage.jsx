@@ -6,7 +6,7 @@ const ProviderPage = () => {
         <div>
             <h3>Provider</h3>
             <a href="" target="_blank">
-                <button> Provider Info </button>
+                <button> Provider Name </button>
             </a> <br/>
             <a href="" target="_blank">
                 <button> Appointments </button>
@@ -24,9 +24,8 @@ const ProviderPage = () => {
                 <button> Cancel appointment </button>
             </a> <br/>
             <a href="" target="_blank">
-                <button> Set Personal Reminders </button>
-            </a> <br/>
-        
+                <button> Resource Page </button>
+            </a> <br/>       
         </div>
     )
 }

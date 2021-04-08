@@ -1,7 +1,7 @@
 import {  useState } from 'react';
 
 const AddAppointment = ({ onAdd }) => {
-    const [title, setTitle] =useState('')
+    const [, setTitle] =useState('')
     const [date, setDate] =useState('')
     const [time, setTime] =useState('')
     const [reminder, setReminder] =useState('')

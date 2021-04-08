@@ -7,15 +7,10 @@ class ProviderRegistration extends React.Component {
     this.state = {
       FirstName: "",
       LastName: "",
-      PhoneNumber: "",
       email: "",
-      City: "",
-      State: "",
-      ZipCode: "",
       username: "",
       password: "",
       PasswordConfirm: "",
-      ProviderCode: "",
       serverResponse: null
     };
   }
@@ -31,15 +26,10 @@ class ProviderRegistration extends React.Component {
     const serverResponse = this.props.handleSubmit(
       this.state.FirstName,
       this.state.LastName,
-      this.state.PhoneNumber,
       this.state.email,
-      this.state.City,
-      this.state.State,
-      this.state.ZipCode,
       this.state.username,
       this.state.password,
       this.state.PasswordConfirm,
-      this.state.ProviderCode
     );
     this.setState(
       {
@@ -88,19 +78,6 @@ class ProviderRegistration extends React.Component {
 
           <div>
                 <label>
-                    Phone Number:
-                    <input
-                        type="text"
-                        name="PhoneNumber"
-                        placeholder="Your Phone Number"
-                        value={this.state.PhoneNumber}
-                        onChange={(event) => {
-                        this._onChange("PhoneNumber", event.target.value);
-                        }}
-                    />
-                </label>
-                <br/>
-                <label>
                     Email:
                     <input
                         type="email"
@@ -116,51 +93,10 @@ class ProviderRegistration extends React.Component {
           </div>
           <div>
                 <label>
-                    City:
-                    <input
-                        type="text"
-                        name="City"
-                        placeholder="Your City"
-                        value={this.state.City}
-                        onChange={(event) => {
-                        this._onChange("City", event.target.value);
-                        }}
-                    />
-                </label>
-                <br/>
-                <label>
-                    State:
-                    <input
-                        type="text"
-                        name="State"
-                        placeholder="Your State"
-                        value={this.state.State}
-                        onChange={(event) => {
-                        this._onChange("State", event.target.value);
-                        }}
-                    />
-                </label>
-                <br/>
-                <label>
-                    Zip Code:
-                    <input
-                        type="text"
-                        name="ZipCode"
-                        placeholder="Your ZipCode"
-                        value={this.state.ZipCode}
-                        onChange={(event) => {
-                        this._onChange("ZipCode", event.target.value);
-                        }}
-                    />
-                </label>
-                <br/>
-          </div>
-          <div>
-                <label>
                     Username:
                     <input
                         type="text"
-                        name="password"
+                        name="username"
                         placeholder="Your username"
                         value={this.state.username}
                         onChange={(event) => {
