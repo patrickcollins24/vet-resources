@@ -1,42 +1,45 @@
-import React from "react";
+import React,{useState} from "react";
 import LoginMessage from "./LoginMessage";
 
-class ProviderLogin extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      username: "",
-      password: "",
-      serverResponse: null
-    };
-  }
-
-  _onChange = (field, value) => {
-    this.setState({
-      [field]: value
-    });
+const ProviderLogin =()=> {
+  const [username,setUsername] = useState("");
+  const [password,setPassword] = useState("");
+  const [signinerror,setSigninerror] = useState("");
+  const [loginData,setLoginData] = useState("");   
+  
+  const _handleusername = (input) => {
+    setUsername(input)
   };
 
-  _handleSubmit = (event) => {
+  const _handlepassword = (input) => {
+    setPassword(input)
+  };
+
+  const _handleSubmit = async(event) => {
     event.preventDefault();
-    const serverResponse = this.props.handleSubmit(
-      this.state.username,
-      this.state.password
-    );
-    this.setState(
-      {
-        serverResponse
-      },
-      () => {
-        console.log("server response is:", serverResponse);
-      }
-    );
+    const loginData ={
+      username: username,
+      password: password,
+    };
+
+    const response = await fetch(`http://127.0.0.1:3003/users/login`,{
+      method: "POST", 
+      headers: { "Content-Type" : "application/json" },
+      body: JSON.stringify(loginData)
+    });
+    const resData = await response.json();
+    console.log("server response is:", resData)
+    if (resData.msg){
+      setSigninerror(resData.msg)
+    }
+    else{
+      
+    }
   };
 
-  render() {
     return (
       <>
-        <form onSubmit={this._handleSubmit}>
+        <form onSubmit={event => _handleSubmit(event)}>
             <div><h1>Login</h1>
         </div>
         <div><h2>Already Registered? Sign in Below</h2></div>
@@ -46,9 +49,9 @@ class ProviderLogin extends React.Component {
               type="text"
               name="username"
               placeholder="Your Username"
-              value={this.state.username}
+              value={username}
               onChange={(event) => {
-                this._onChange("username", event.target.value);
+                _handleusername(event.target.value);
               }}
             />
           </label>
@@ -59,9 +62,9 @@ class ProviderLogin extends React.Component {
                         type="password"
                         name="password"
                         placeholder="Your Password"
-                        value={this.state.password}
+                        value={password}
                         onChange={(event) => {
-                        this._onChange("password", event.target.value);
+                          _handlepassword(event.target.value);
                         }}
                     />
                 </label>
@@ -69,15 +72,15 @@ class ProviderLogin extends React.Component {
           </div>
           <button type="submit">Login</button>
         </form>
-        {!!this.state.serverResponse ? (
+        {/* {!!this.state.loginData ? (
           <LoginMessage
-            isValid={this.state.serverResponse.isValid}
-            message={this.state.serverResponse.message}
+            isValid={this.state.loginData.isValid}
+            message={this.state.loginData.message}
           />
-        ) : null}
+        ) : null} */}
       </>
     );
-  }
+  
 }
 
 export default ProviderLogin;
