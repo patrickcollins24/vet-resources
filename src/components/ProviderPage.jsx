@@ -4,14 +4,11 @@
 const ProviderPage = () => {
     return (
         <div>
-            <h1>Provider</h1>
-            <a href="" target="_blank">
-                <button> Provider Name </button>
-            </a> <br/>
-            <p>Carter Rohn</p>
-            <a href="" target="_blank">
-                <button> Appointments </button>
-            </a> <br/>
+
+           <h2>Provider Name</h2>
+            <h3>Carter Rohn</h3>
+
+            <h2>Appointments</h2>
             <h3>Intake</h3>
             <p>VETERAN: JoJo Myles </p>
             <p>DATE:  4/15/2021</p>
@@ -31,11 +28,8 @@ const ProviderPage = () => {
             <p>DATE:  4/16/2021</p>
             <p>TIME:  0800</p>
             <p>LOCATION:  East Point VA Clinic</p>
-            <p>DESCRIPTION:  Congratulations on your new apartment.  Let's get your fridge stocked up.  We also may be able to supply you with cooking and cleaning supplies.  </p>
-
-            <a href="" target="_blank">
-                <button> Events </button>
-            </a> <br/>
+            <p>DESCRIPTION:  Congratulations on your new apartment.  Let's get your fridge stocked up.  We also may be able to supply you with cooking and cleaning supplies.  </p><br/>
+            <h2>Events</h2>
 
             <h3>Stand Down</h3>
             <p>DATE: 5/20/2021</p>
@@ -50,7 +44,6 @@ const ProviderPage = () => {
             <p>This workshop teaches Veterans how to prepare a professional resume that reflects their skills, knowledge and education that are relevant to the job they are seeking.
 
 </p>
-\
 
             <a href="" target="_blank">
                 <button> Add Event </button>

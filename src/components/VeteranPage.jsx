@@ -5,15 +5,11 @@
 const VeteranPage = () => {
     return (
         <div>
-            <h1>Veteran</h1>
-            <a href="" target="_blank">
-                <button> Veteran Name </button>
-            </a> <br/>
+            
+            <h2>Veteran Name</h2>
 
-            <p>JoJo Myles</p>
-            <a href="" target="_blank">
-                <button> Appointments </button>
-            </a> <br/>
+            <h3>JoJo Myles</h3>
+            <h2>Appointments</h2>
 
             <h3>Intake</h3>
             <p>PROVIDER: Carter Rohn </p>
@@ -23,9 +19,7 @@ const VeteranPage = () => {
             <p>DESCRIPTION:  First interview to determine what services/resources are available to veteran</p>
 
             
-            <a href="" target="_blank">
-                <button> Events </button>
-            </a> <br/>
+            <h2>Events</h2>
 
             <h3>Stand Down</h3>
             <p>DATE: 5/20/2021</p>
