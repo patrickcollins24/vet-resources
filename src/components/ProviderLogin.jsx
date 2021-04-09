@@ -42,7 +42,7 @@ const ProviderLogin =()=> {
         <form onSubmit={event => _handleSubmit(event)}>
             <div><h1>Login</h1>
         </div>
-        <div><h2>Already Registered? Sign in Below</h2></div>
+        <div><h2>Sign in Below</h2></div>
             <label>
             Username:
             <input
