@@ -1,19 +1,14 @@
 import React from "react";
 import LoginMessage from "./LoginMessage";
 
-class ProviderRegistration extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      FirstName: "",
-      LastName: "",
-      email: "",
-      username: "",
-      password: "",
-      PasswordConfirm: "",
-      serverResponse: null
-    };
-  }
+const ProviderRegistration = () => {
+  const [provider, setProvider] = useState(true);
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
+  const [email, setEmail] = useState('');
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+  
 
   _onChange = (field, value) => {
     this.setState({
@@ -21,27 +16,29 @@ class ProviderRegistration extends React.Component {
     });
   };
 
-  _handleSubmit = (event) => {
+  _handleSubmit = async(event) => {
     event.preventDefault();
-    const serverResponse = this.props.handleSubmit(
-      this.state.FirstName,
-      this.state.LastName,
-      this.state.email,
-      this.state.username,
-      this.state.password,
-      this.state.PasswordConfirm,
-    );
-    this.setState(
-      {
-        serverResponse
-      },
-      () => {
-        console.log("server response is:", serverResponse);
-      }
-    );
+    const registerData = {
+      provider: provider,
+      firstName: firstName,
+      lastName: lastName,
+      email: email,
+      username: username,
+      password: password,
+
+    };
+  
+
+    const response = await fetch(`http://127.0.0.1:3003/users/register`,{
+      method: "POST",
+      headers: { "Content-Type" : "application/json" },
+      body: JSON.stringify(registerData)
+    });
+
+
   };
 
-  render() {
+
     return (
       <>
         <form onSubmit={this._handleSubmit}>
@@ -149,15 +146,15 @@ class ProviderRegistration extends React.Component {
           </div>         
           
         </form>
-        {!!this.state.serverResponse ? (
+        {/* {!!this.state.serverResponse ? (
           <LoginMessage
             isValid={this.state.serverResponse.isValid}
             message={this.state.serverResponse.message}
           />
-        ) : null}
+        ) : null} */}
       </>
     );
   }
-}
+
 
 export default ProviderRegistration;
