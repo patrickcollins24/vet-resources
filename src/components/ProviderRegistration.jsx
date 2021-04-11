@@ -1,4 +1,4 @@
-import React from "react";
+import { useState } from 'react';
 import LoginMessage from "./LoginMessage";
 
 const ProviderRegistration = () => {
@@ -10,18 +10,31 @@ const ProviderRegistration = () => {
   const [password, setPassword] = useState('');
   
 
-  _onChange = (field, value) => {
-    this.setState({
-      [field]: value
-    });
+  const _handleProvider = (input) => {
+    setProvider(input)
+  };
+  const _handleFirstName = (input) => {
+    setFirstName(input)
+  };
+  const _handleLastName = (input) => {
+    setLastName(input)
+  };
+  const _handleEmail = (input) => {
+    setEmail(input)
+  };
+  const _handleUsername = (input) => {
+    setUsername(input)
+  };
+  const _handlePassword = (input) => {
+    setPassword(input)
   };
 
-  _handleSubmit = async(event) => {
+const _handleSubmit = async(event) => {
     event.preventDefault();
     const registerData = {
       provider: provider,
-      firstName: firstName,
-      lastName: lastName,
+      first_name: firstName,
+      last_name: lastName,
       email: email,
       username: username,
       password: password,
@@ -34,6 +47,8 @@ const ProviderRegistration = () => {
       headers: { "Content-Type" : "application/json" },
       body: JSON.stringify(registerData)
     });
+    const resData = await response.json();
+    console.log("server response is:", resData)
 
 
   };
@@ -41,7 +56,7 @@ const ProviderRegistration = () => {
 
     return (
       <>
-        <form onSubmit={this._handleSubmit}>
+        <form onSubmit={_handleSubmit}>
             <div><h1>Registration</h1>
         </div>
         <div><h2>Please Fill out the following information</h2></div>
@@ -51,9 +66,9 @@ const ProviderRegistration = () => {
               type="text"
               name="FirstName"
               placeholder="Your First Name"
-              value={this.state.FirstName}
+              value={firstName}
               onChange={(event) => {
-                this._onChange("FirstName", event.target.value);
+              _handleFirstName(event.target.value);
               }}
             />
           </label>
@@ -65,9 +80,9 @@ const ProviderRegistration = () => {
                         type="text"
                         name="LastName"
                         placeholder="Your LastName"
-                        value={this.state.LastName}
+                        value={lastName}
                         onChange={(event) => {
-                        this._onChange("LastName", event.target.value);
+                        _handleLastName(event.target.value);
                         }}
                     />
                 </label>
@@ -80,9 +95,9 @@ const ProviderRegistration = () => {
                         type="email"
                         name="email"
                         placeholder="Your email"
-                        value={this.state.email}
+                        value={email}
                         onChange={(event) => {
-                        this._onChange("email", event.target.value);
+                        _handleEmail(event.target.value);
                         }}
                     />
                 </label>
@@ -95,9 +110,9 @@ const ProviderRegistration = () => {
                         type="text"
                         name="username"
                         placeholder="Your username"
-                        value={this.state.username}
+                        value={username}
                         onChange={(event) => {
-                        this._onChange("username", event.target.value);
+                        _handleUsername(event.target.value);
                         }}
                     />
                 </label>
@@ -110,26 +125,14 @@ const ProviderRegistration = () => {
                         type="password"
                         name="password"
                         placeholder="Your Password"
-                        value={this.state.password}
+                        value={password}
                         onChange={(event) => {
-                        this._onChange("password", event.target.value);
+                        _handlePassword(event.target.value);
                         }}
                     />
                 </label>
                 <br/>
-                <label>
-                    Confirm Password:
-                    <input
-                        type="password"
-                        name="PasswordConfirm"
-                        placeholder="Confirm Password"
-                        value={this.state.PasswordConfirm}
-                        onChange={(event) => {
-                        this._onChange("PasswordConfirm", event.target.value);
-                        }}
-                    />
-                </label>
-                <br/>
+              
           </div>
           <button type="submit">Submit</button>
           <div>
@@ -139,7 +142,7 @@ const ProviderRegistration = () => {
                         type="checkbox"
                         name="Provider?"
                         placeholder="Provider?"
-                        onChange={this.handleChange} 
+                        onChange={_handleProvider} 
                     />
                 </label>
                 <br/>

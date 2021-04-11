@@ -1,6 +1,6 @@
-import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Link, Route, Switch, useHistory } from 'react-router-dom';
 import { useState } from 'react';
-import './App.css';
+import 'bulma/css/bulma.css';
 import Navbar from "./components/Navbar/Navbar";
 import MenuItems from 'react'
 import Appointments from './components/Appointments';
@@ -21,9 +21,10 @@ export default function App() {
   const [isadmin,setIsadmin]=useState(false);
   return (
     <Router>
-       <Switch>
+      <Switch>
           <Route exact path="/">
             <Navbar />
+            <ProviderRegistration />
             <ProviderLogin user={user} isloggedin={isloggedin} isadmin={isadmin}/>
           </Route>
           <Route path="/resources">
@@ -32,7 +33,7 @@ export default function App() {
           </Route>
           <Route path="/register">
             <Navbar />
-            <ProviderRegistration />
+            
           </Route>
           <Route path="/users">
             <Navbar />
@@ -45,4 +46,4 @@ export default function App() {
         </Switch>      
     </Router>
   );
- }
+}
