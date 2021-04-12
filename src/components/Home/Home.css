@@ -9,16 +9,16 @@
 }
 
 body {
-    background-color: cadetblue;
+    background-color: rgb(89, 123, 199);
   font-family: 'Poppins', sans-serif;
 }
 
 .container {
-  max-width: 500px;
+  max-width: 200px;
   margin: 30px auto;
   overflow: auto;
   min-height: 300px;
-  border: 1px solid green;
+  border: 2px double rgb(38, 0, 128);
   padding: 30px;
   border-radius: 5px;
 }
