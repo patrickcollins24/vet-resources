@@ -1,3 +1,21 @@
+# Vet Resources
+
+The reason we decided to proceed with the app is that I noticed at the beginning of several homeless veteran’s journeys back to a sense of normalcy that several appointments are missed in the weeks-months prior to being fully enrolled into the VA.  Sometimes it is the Veterans’s fault as they are coming from environments that can cause them to “forget.”  Most of the time they are given papers to keep track of their appointments.  Unfortunately, papers are often the first to get lost.  What most homeless people have or at least have access to is a phone (through Lifeline program) or a computer with internet access(library).  Creating this app would be used as a buffer between intake and and being fully registered thus saving time and money, and maybe even allow the providers to assist more veterans more efficiently. 
+
+On the front end we used React due to its simplicity compared to vanilla JavaScript.    
+
+On the backend we used Node.js with express while hosting our postgress SQL database with elephantsql.  We had originally flirted with the idea of using Python as a backend database but decided against it when we scaled down our project.   
+
+ 
+
+Originally, we were going to use the VA API to pull forms and options directly to our site.  However, given the time frame to complete the project we delayed that set up for a future date.   Used hard coded links to specific sections of the VA.gov website as part of the Resources page. 
+
+ 
+
+Some future additions to the project will include styling, a calendar, and the ability to set up reminders in the app.  The reminders could even load a notification or as a text message. 
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
