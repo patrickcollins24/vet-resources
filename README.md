@@ -1,5 +1,7 @@
 # Vet Resources
 
+![Alt text](https://github.com/patrickcollins24/vet-resources/blob/main/Screenshot%202021-04-12%20112122.png)
+
 The reason we decided to proceed with the app is that I noticed at the beginning of several homeless veteran’s journeys back to a sense of normalcy that several appointments are missed in the weeks-months prior to being fully enrolled into the VA.  Sometimes it is the Veterans’s fault as they are coming from environments that can cause them to “forget.”  Most of the time they are given papers to keep track of their appointments.  Unfortunately, papers are often the first to get lost.  What most homeless people have or at least have access to is a phone (through Lifeline program) or a computer with internet access(library).  Creating this app would be used as a buffer between intake and and being fully registered thus saving time and money, and maybe even allow the providers to assist more veterans more efficiently. 
 
 On the front end we used React due to its simplicity compared to vanilla JavaScript.    
