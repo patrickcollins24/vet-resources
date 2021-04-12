@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Link, Route, Switch, useHistory } from 'react-
 import { useState } from 'react';
 import 'bulma/css/bulma.css';
 import Navbar from "./components/Navbar/Navbar";
-import MenuItems from 'react'
+import Home from './components/Home';
 import Appointments from './components/Appointments';
 import AddAppointment from './components/AddAppointment';
 import VeteranPage from './components/VeteranPage';
@@ -24,8 +24,9 @@ export default function App() {
       <Switch>
           <Route exact path="/">
             <Navbar />
+            <Home />
             <ProviderRegistration />
-            <ProviderLogin user={user} isloggedin={isloggedin} isadmin={isadmin}/>
+            <ProviderLogin/>
           </Route>
           <Route path="/resources">
             <Navbar />
@@ -33,6 +34,7 @@ export default function App() {
           </Route>
           <Route path="/register">
             <Navbar />
+            
             
           </Route>
           <Route path="/users">

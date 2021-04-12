@@ -56,10 +56,25 @@ const _handleSubmit = async(event) => {
 
     return (
       <>
-        <form onSubmit={_handleSubmit}>
+        <div className='container'>
+
+        <form className='add-form' onSubmit={_handleSubmit}>
             <div><h1>Registration</h1>
         </div>
-        <div><h2>Please Fill out the following information</h2></div>
+        <div className='form-control'><h2>Please Fill out the following information</h2></div>
+        <div className='form-control'>
+                <label>
+                    Provider? Click here:
+                    <input
+                        type="checkbox"
+                        name="Provider?"
+                        placeholder="Provider?"
+                        onChange={_handleProvider} 
+                    />
+                </label>
+                <br/>
+          </div>         
+        <div className='form-control'>
             <label>
             First Name:
             <input
@@ -72,8 +87,9 @@ const _handleSubmit = async(event) => {
               }}
             />
           </label>
+          </div>
           <br/>
-
+                <div className='form-control'>
                 <label>
                     Last Name:
                     <input
@@ -86,9 +102,10 @@ const _handleSubmit = async(event) => {
                         }}
                     />
                 </label>
+                </div>
                 <br/>
 
-          <div>
+          <div className='form-control'>
                 <label>
                     Email:
                     <input
@@ -103,7 +120,7 @@ const _handleSubmit = async(event) => {
                 </label>
                 <br/>
           </div>
-          <div>
+          <div className='form-control'>
                 <label>
                     Username:
                     <input
@@ -118,7 +135,7 @@ const _handleSubmit = async(event) => {
                 </label>
                 <br/>
           </div>
-          <div>
+          <div className='form-control'>
                 <label>
                     Password:
                     <input
@@ -135,18 +152,7 @@ const _handleSubmit = async(event) => {
               
           </div>
           <button type="submit">Submit</button>
-          <div>
-                <label>
-                    Provider? Click here:
-                    <input
-                        type="checkbox"
-                        name="Provider?"
-                        placeholder="Provider?"
-                        onChange={_handleProvider} 
-                    />
-                </label>
-                <br/>
-          </div>         
+          
           
         </form>
         {/* {!!this.state.serverResponse ? (
@@ -155,6 +161,7 @@ const _handleSubmit = async(event) => {
             message={this.state.serverResponse.message}
           />
         ) : null} */}
+        </div>
       </>
     );
   }

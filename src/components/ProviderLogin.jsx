@@ -39,8 +39,10 @@ const ProviderLogin =()=> {
 
     return (
       <>
-        <form onSubmit={event => _handleSubmit(event)}>
-            <div><h1>Login</h1>
+        <div className='container'>
+        <form className='add-form'onSubmit={event => _handleSubmit(event)}>
+            <div className='form-control'>
+              <h1>Login</h1>
         </div>
         <div><h2>Already Registered? Sign in Below</h2></div>
             <label>
@@ -70,7 +72,7 @@ const ProviderLogin =()=> {
                 </label>
                 
           </div>
-          <button type="submit">Login</button>
+          <button type="submit" className='btn btn-block'>Login</button>
         </form>
         {/* {!!this.state.loginData ? (
           <LoginMessage
@@ -78,6 +80,7 @@ const ProviderLogin =()=> {
             message={this.state.loginData.message}
           />
         ) : null} */}
+        </div>
       </>
     );
   
